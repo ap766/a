@@ -16,17 +16,17 @@ x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=50
 (y_train == 'M').sum()
 (y_train=='B').sum()
 278/len(y_train)  # Baseline model of accuracy =(more number of occurrences)/total data elements
-#Step 6
+
 from sklearn.metrics import accuracy_score,confusion_matrix,classification_report
 baseline_pred=["B"]*len(y_train)
 accuracy_score(y_train,baseline_pred)
 confusion_matrix(y_train,baseline_pred)
 classification_report(y_train,baseline_pred)
-#Step 7
+#Step 6
 from sklearn.naive_bayes import GaussianNB
 nb_model=GaussianNB()
 nb_model.fit(x_train,y_train)
-#Step 8
+#Step 7
 nb_model.score(x_train,y_train)
 nb_model.score(x_test,y_test)
 confusion_matrix(y_train,nb_model.predict(x_train))
