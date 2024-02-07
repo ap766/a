@@ -36,7 +36,7 @@ lr_model.predict(x_train)
 #Step 7
 from sklearn.metrics import r2_score
 r2_score(y_train,lr_model.predict(x_train)
-r2_score(y_train,lr_model.predict(x_train)
+r2_score(y_test,lr_model.predict(x_test)
 lr_model.score(x_test,y_test)
 
 #Step 8
